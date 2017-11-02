@@ -1,0 +1,75 @@
+* Git
+** while rebasing always add one file at a time (eg git add file-name-changed)
+** git reset HEAD~ => command to delete last commit and changes will be unstaged. So you can change your previous commit, if you want to add something in your previous commit then => git reset --soft
+** your master and origin/master should be on same position
+** if you want to move your changes from staged to unstaged then use git reset --soft
+** git fetch
+   git fetch =>fetches from all the branch
+   git fetch branch name=> fetch the specified branch only
+** to remove stash contents=> git stash drop
+** to delete local branch=> git branch -d <branch-name>
+** to delete origin branch=> git push origin :<branch-name>
+** if you did commit in wrong branch just do git reset --soft HEAD~1
+** to edit previous commit message => in magit use option reword
+* learning
+** if 'ad' command showing ???????????? no permissions
+   do
+   sudo adb kill-server
+   sudo adb start-server
+
+** To send changes to othe branch (eg bhavesh) and if you are on other branch (eg master)=>
+   1. git checkout bhavesh
+   2. git rebase master
+   3. git push origin bhavesh
+   4. git checkout master
+** sudo su - command is used to avoid entering password again & again in terminal
+** comment is a function for
+** string to object conversion => js/moment
+    object to string => js/Date
+    if js/Date doesn't have any parameter then it returns today's date
+** always use keywords for comparing => most efficient than strings
+** to send value from back-end to app-db=>
+    1. create document in robomongo
+    2. add auth.clj me (utils/send-success-response me key and call db function
+    3. add key in events.cljs me :process-login-response
+** $in
+    The $in operator selects the documents where the value of a field equals any value in the specified array.
+    for eg=>
+    (let [parent-types ["walkin-father" "walkin-mother" "father" "mother"]
+          parents (user-db/get-user-data {:type-of {$in parent-types}
+                                          :phone phone})])
+
+** command to remove trash contents =>  rm -rf ~/.local/share/Trash/*
+
+** to prevent form not to re-render again and again just add (.preventDefalt e) line in on-submit function
+
+** Always do sudo service mongodb restart when you make changes in /etc/mongodb.conf
+** to restore database=>
+   command => mongorestore -d db_name path-of-dump-db --port port-number
+** to import collection in mongo => mongoimport --db <db-name> --collection <collection-name> --file <json-file-name>
+** to export collection in mongo => mongoexport --db <db-name> --collection <collection-name> --out <json-file-name> --port 25017
+
+** always export capital WBK_DB_PASSWD
+
+** to give ooptional parameters to function use  (defn test [abc & [xyz]] ....)
+     here xyz is optional parameter
+* commands
+** ls -la shows soft links
+* CRM
+* todo
+** bugs
+*** http://pm.mindseed.in/T1272 => users unable to login
+    SCHEDULED: <2017-
+* Shortcuts
+** Emacs
+- C-c C-w - to move a task in new heading
+- C-c C-t - to mark as next,todo etc
+- C-c C-s - to schedule a task
+- C-c C-d - to mark deadline for a task
+- C-c a   - to see agenda view (add (global-set-key "\C-ca" 'org-agenda) in .spacemacs file) (f -forward b- backward)
+-alt-shift -enter - for adding another heading/checkitem
+- C-c C-c - to mark a checkitem as done
+- C-? to redo and C-/ to undo
+* css
+** comma role in css =>
+    .st-navbar, .children-navbar {styles}  it means both are different tags
