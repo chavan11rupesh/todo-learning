@@ -53,6 +53,19 @@
 
 ** to give ooptional parameters to function use  (defn test [abc & [xyz]] ....)
      here xyz is optional parameter
+** 1. compizconfigsettingsmanager -> effects->animations->focus animation->wave to set wave animations.
+** 2. https://github.com/EliverLara/Ant#note to set Ant theme
+** 3. to set default theme go to appearance -> theme -> ambiance(default)
+** 4. to create new database commands=>
+       1. sudo mongo db name --port port-no
+       2. db.createUser({user: "gps", pwd: "inMbMZg2DM75", roles: [{role: "readWrite", db: "db-name (for eg gps_v1_dev)"}]})
+       3. edit  mongodb.conf uncomment auth=true
+       4. also make changes in robo
+       5. sudo service mongodb restart
+
+** steps to create presentations in emacs
+*** creating cool slides in emacs => http://jr0cket.co.uk/2013/10/create-cool-slides--Org-mode-Revealjs.html.html
+***  to convert .org to .html => https://github.com/robrohan/bestowed
 * commands
 ** ls -la shows soft links
 * CRM
