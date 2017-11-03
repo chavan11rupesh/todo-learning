@@ -5,7 +5,7 @@
 ** TODO
 *** DONE Create wiki on phabricatorp
 *** DONE flow diagram
-*** NEXT User tasks for CRM
+*** NEXT User tdasks for CRM
 ** Notes
 *** warm-leads and hot-leads of one salesperson should not be transferred to other sales
 *** pricipal can take a warm lead from sales
@@ -23,7 +23,18 @@
 * noodle
 ** admission management
 *** TODO
-**** NEXT Refactor front-end
+**** doa ==> disable 15 days before today
+**** T1516 Add roll-over in edit child form
+**** DONE Make installment date and other fields editable
+**** Details to show in edit child form
+**** DONE Write generic function for date.
+**** Design fees datastructure
+***** Current year and next year fees record separate.
+**** DONE Rearrange components in form
+**** DONE Date of installment problem in defounce
+**** DONE daycare fees part on rd side.
+**** DONE Round-off fees
+**** TODO Refactor front-end
 **** DONE Send feedback given by pranav to prady (document)
 **** DONE Referral should be an absolute value and not percentage.
 **** DONE Unique key for offers table.
@@ -34,12 +45,24 @@
      To edit instalment information
 **** preview table for rd after editing rack-rate or discounts and offers
 **** DONE Fix iterative calculation on discounts
+*** questions
+**** Month-multiplier information
+**** validation of admission type
+**** preschool and daycare fees combined ==> installment
+***** only daycare -- 1 installment?
+***** preschool and daycare combined ?
+**** round-off off fees/discount ==> nearest 10
 *** feedback
 **** Preview table for rd
      show effect of changes made by rd on fees of all schools and then submit
 **** All information on same page for rd.
 **** Admission month range
 **** DONE Iterative calculation on discounts.
+** notes
+*** round-off done to ==> nfc, total-fee-1-inst, total-fee-3-inst, discount
+* detective
+** investigation
+*** NEXT photos to video api
 * notes
 ** noodle
 *** rack-rate --> month-mult --> gross-fee --> referral and offer --> discount --> installments
@@ -69,6 +92,14 @@ hi
 nil
 ** incidental complexity.
   complexity faced while developing code in a particular language after the problem has been solved logically. Clojure has very less incidental complexity.
+** ctrl+f ==> in console to search and highlight required part
+** [sa/FormGroup {:inline true}]
+** (.preventDefault e)
+   stops from reloading the page when submit is clicked in a form
+** disabled input fields
+   should include onChange #() to avoid warnings
+   if the value of input does not change ==> use defaultValue
+** [sa/FormDropdown] does not have :required field
 * problems
 ** DONE Iterative calculation on discount
 ** DONE Siblings discount
@@ -81,12 +112,30 @@ nil
 ** TODO
 *** DONE create wiki doc for changes/addition adm mgmt.
 *** points 1 to 5 in admission management changes
+    point 1 done
 *** referral modal
 *** sibling discount --> add parent info too.
 *** daycare fees part on rd side.
 *** refactor front end of admission management
 *** DONE addition/changes in day-care fees ==> talk to prady
 *** write cljs and clj tests
-*** ask about rounding off of fees
+*** DONE ask about rounding off of fees
+    round off to next multiple of 10
 ** Learn
 *** org mode ==> youtube videos
+* Tuesday, 17th oct
+** TODO
+*** DONE sibling discount --> add parent info too.
+*** NEXT referral discount
+*** day-care => combo discount
+* Wednesday, 18th oct
+** TODO
+*** DONE INSTALLMENTS --> DATE AND NUMBER
+*** Admission type ==> start early.
+* Tuesday, 31st oct
+** TODO
+*** DONE roll-over flag to disable roll-over button
+*** DONE collection name according to academic year
+*** DONE Paid checkbox in installments
+*** referee information
+* November
